@@ -1,0 +1,540 @@
+/*--- ESTILIZAZACAO DA PAGINA PRINCIPAL E SEUS COMPONENTES (PLAY,PAUSE,NEXT,PREVIEW, ETC ----*/
+
+html , body {
+    padding: 0;
+    margin: 0;
+    height: 100%; 
+}
+
+* {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #fff;
+    letter-spacing: 1px;
+}
+
+#nowPlayBarContainer {
+    width: 100%;
+    background-color: #1d1919;
+    bottom: 0;
+    position: fixed;
+    min-width: 620px;
+   
+}
+
+#nowPlayBar {
+    display: flex;
+    height: 105px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+#nowPlayEsquerdo,
+#nowPlayDireito {
+    width: 30%;
+    min-width: 180px;
+}
+
+#nowPlayDireito {
+    position: relative;
+    margin-top: 16px;
+}
+
+#nowPlayCentro {
+    width: 40%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#nowPlayBar .content {
+    width: 100%;
+    height: 58px;
+}
+
+.playerControls .buttons {
+    margin: 0 auto;
+    display: table;
+}
+
+.controlButton {
+    background-color: transparent;
+    border: none;
+    vertical-align: middle;
+}
+
+.controlButton img {
+    width: 23px;
+    height: 22px;
+}
+
+.controlButton.play img,
+.controlButton.pausa img {
+    width: 33px;
+    height: 32px;
+}
+
+.controlButton:hover {
+    cursor: pointer;
+}
+
+.progressTime {
+    color: #f7511e;
+    font-size: 14px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.playbackBar {
+    display: flex;
+}
+
+.progressBar {
+    width: 100%;
+    height: 12px;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+.progressBarBackgroung {
+    background-color: #808080;
+    height: 5px;
+    width: 100%;
+    border-radius: 3px;
+}
+
+.progress {
+    background-color: #7bf781;
+    height: 5px;
+    width: 0;
+    border-radius: 3px;
+}
+
+.playbackBar .progressBar {
+    margin-top: 3px;     
+}
+
+#nowPlayEsquerdo .albumArtwork {
+    height: 100%;
+    max-width: 57px;
+    margin-right: 15px;
+    float: left;
+    background-size: cover;
+}
+
+#nowPlayEsquerdo .trackInfo {
+    display: table;
+}
+
+#nowPlayEsquerdo .trackInfo .artistName {
+    margin: 6px 0;
+    display: inline-block;
+    width: 100%;
+}
+
+#nowPlayEsquerdo .trackInfo .artistName span {
+    font-size: 12px;
+    color: #f7511e;
+}
+
+.volumeBar {
+    width: 190px;
+    position: absolute;
+    right: 0;
+}
+
+.volumeBar .progressBar {
+    width: 130px; 
+}
+
+#internalContainer {
+    min-height: 100%;
+    width: 100%;             
+}
+
+
+/*----ESTILIZACAO DOS COMPONENTES DA BARRA DE NAVEGACAO OU NAVBAR DO LADO ESQUERDO-----*/
+#navBarContainer {
+    background-color: #000000;
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.navBar {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+}
+
+.logotipo {
+    margin-bottom: 15px;
+}
+
+.logotipo img {
+    width: 50px;
+}
+
+.navBar .group {
+    border-top: 1px solid #38df5c;
+    padding: 10px 0;
+}
+
+.navItem {
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.navItemLink .icon {
+    position: absolute;
+    right: 0;
+    top: 6px;
+    width: 25px;
+}
+
+.navItemLink {
+    color: #a0a0a0;
+    text-decoration: none;
+}
+
+.navItemLink:hover {
+    color: #38df5c;
+    }
+
+/*--- ESTILIZAZACAO DA PAGINA PRINCIPAL (NO CENTRO) ----*/
+
+body {
+    background-color: #242121;
+    font-size: 14px;
+    min-width: 720px;
+}
+
+#mainViewContainer {
+    margin-left: 220px;
+    padding-bottom: 90px;
+    width: calc(100% - 220px);
+}
+
+#principalContent {
+    padding: 0 20px;
+}
+
+/*--- ESTILIZAZACAO DAS FOTOS DOS ALBUMS E TITULO PRINCIPAL (NO CENTRO DO CONTAINER) ----*/
+
+.paginaHeadingBig {
+   padding: 20px;
+   text-align: center; 
+}
+
+.gridViewItem {
+    display: inline-block;
+    margin-right: 20px;
+    width: 29%;
+    max-width: 200px;
+    min-width: 150px;
+    margin-bottom: 20px;
+}
+
+.gridViewItem img {
+    width: 100%;
+}
+
+.gridViewInfo {
+    font-weight: 300;
+    text-align: center;
+    padding: 5px 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.gridViewItem a {
+    text-decoration: none;
+}
+
+.entidadeInfo {
+    padding: 40px 0 10px 0;
+    display: inline-block;
+    width: 100%;
+}
+
+.entidadeInfo .sectionEsquerda {
+    width: 30%;
+    float: left;
+    max-width: 250px;
+}
+
+.entidadeInfo .sectionEsquerda img {
+    width: 100%;
+}
+
+.entidadeInfo .sectionDireita {
+    width: 70%;
+    float: left;
+    padding: 5px 10px 5px 40px;
+    box-sizing: border-box;
+}
+
+.entidadeInfo .sectionEsquerda h2 {
+    margin-top: 0px;
+}
+
+.entidadeInfo .sectionDireita p {
+    color: #869c7f;
+    font-weight: 200;
+}
+
+
+/*--- ESTILIZAZACAO PRINCIPAL: Lista de Musicas do Menu (NO CENTRO DO CONTAINER) ----*/
+
+.listaMusicas {
+    padding: 0;
+}
+
+.musicalistRow {
+    height: 40px;
+    padding: 15px 10px;
+    list-style: none;
+}
+
+.musicaInfo span {
+    color: #939393;
+    font-weight: 200;
+}
+
+.musicalistRow:hover {
+   background-color: #282828; 
+}
+
+.musicalistRow .musicaCount {
+    width: 8%;
+    float: left;
+}
+
+.musicalistRow .musicaCount img {
+     width: 20px;
+     visibility: hidden;
+     position: absolute;
+     cursor: pointer;
+}
+
+.musicalistRow:hover .musicaCount img {
+    visibility: visible;
+}
+
+.musicalistRow .musicaCount span {
+    visibility: visible;
+}
+
+.musicalistRow:hover .musicaCount span {
+    visibility: hidden;
+}
+
+.musicalistRow .musicaInfo {
+    width: 75%;
+    float: left;
+}
+
+.musicalistRow .musicaInfo span {
+    display: block;
+}
+
+.musicalistRow .musicaOptions {
+    width: 6%;
+    float: left;
+    text-align: right;
+}
+
+.musicalistRow .musicaOptions img {
+    width: 15%;
+    visibility: hidden;
+}
+
+.musicalistRow:hover .musicaOptions img {
+    visibility: visible;
+}
+
+.musicalistRow .musicaDuration {
+    width: 12%;
+    float: left;
+    text-align: right;
+}
+
+.musicalistRow .musicaInfo .musicaNome {
+    color: #fff;
+    margin-bottom: 7px;
+}
+
+
+/*--- ESTILIZAZACAO DA PAGINA PRINCIPAL (NO CENTRO) NA PAGINA DAS MUSICAS DE CADA ARTISTA ----*/
+
+.artistInfo {
+    text-align: center;
+    padding: 19px;
+   }
+
+.button {
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 12px;
+    background-color: transparent;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border: 2px solid #fff;
+    border-radius: 500px;
+    padding: 15px;
+    min-width: 130px;
+}
+
+.button.green {
+    background-color: #f7511e;
+    border-color: #f7511e;
+}
+
+.borderBottom {
+    border-bottom: 1px solid #869c7f;
+    margin-bottom: 20px;
+}
+
+.listaMusicaContainer h2,
+.gridViewContainer h2,
+.artistsContainer h2 {
+    text-align: center;
+    padding: 20px;
+   
+}
+
+[role="link"] {
+    cursor: pointer;
+}
+
+.procurarContainer {
+    background-color: #2c2b2b;
+    padding: 10px 26px;
+}
+
+.procurarContainer {
+    margin: 0;
+    font-weight: 200;
+}
+
+.procurarContainer .searchInput {
+    width: 100%;
+    background-color: transparent;
+    border:none;
+    color:#38df5c;
+    font-weight: 500;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+input:focus {
+    outline:none; 
+}
+
+.procurarResultsRow {
+    padding: 15px 10px;
+}
+
+.procurarResultsRow:hover {
+    background-color: #282828;
+}
+
+.procurarResultsRow .artistName span {
+    color: #fff;
+}
+
+.noResults {
+    margin: 15px;
+    display: block;
+}
+
+.buttonItems .button {
+   display: block;
+   margin: 0 auto 20px auto; 
+}
+
+.playslistcontainer {
+    padding: 12px 0;
+}
+
+.playlistImage {
+    border: 2px solid #d6fad8;
+    padding: 10px;
+}
+
+.optionsMenu {
+    position: fixed;
+    background-color: #282828;
+    width: 200px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    z-index: 1000;
+    display: none;
+}
+
+.optionsMenu .Item {
+    width: 100%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    font-weight: 400;
+    color: rgba(147, 147, 147, 0.8);
+    cursor: pointer;
+    height: 40px;
+    background-color: #282828;
+    font-size: 14px;
+}
+
+.optionsMenu .Item:hover {
+    color: #fff;
+    background-color: #333;
+    border-color: #333;
+}
+
+.optionsMenu select {
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.userInfo h1 {
+    text-align: center;
+}
+
+.userDetails {
+    padding: 19px;
+}
+
+.userDetails .container h2 {
+    text-align: center;
+}
+
+.userDetails .container .message {
+    color: #38df5c;
+    font-weight: 300;
+}
+
+.userDetails .container input[type="text"],
+.userDetails .container input[type="password"],
+.userDetails .container button {
+    display: block;
+    margin: 16px auto;
+}
+
+.userDetails .container input[type="text"],
+.userDetails .container input[type="password"] {
+    height: 45;
+    width: 90%;
+    background: #3d3d3d;
+    border: 1px solid #b2f3b5;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 0 20px;
+}
